@@ -15,10 +15,10 @@ x ffmpeg-4.0.tar.bz2 &&
 x ffmpeg-4.0.tar &&
 cd ffmpeg-4.0 &&
 
-PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure \
+PKG_CONFIG_PATH="/tmp/ffmpeg_build/lib/pkgconfig" ./configure \
 --pkg-config-flags="--static" \
---extra-cflags="-I$HOME/ffmpeg_build/include" \
---extra-ldflags="-L$HOME/ffmpeg_build/lib" \
+--extra-cflags="-I/tmp/ffmpeg_build/include" \
+--extra-ldflags="-L/tmp/ffmpeg_build/lib" \
 --extra-libs="-lpthread -lm" \
 --enable-gpl \
 --enable-version3 \
